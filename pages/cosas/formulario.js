@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import addSong from './cosa';
+
+const { mongoose } = require('./database');
+
+const SongList = await mongoose.find({});
+
+const addSong = await mongoose.save(title);
+    addSong === title;
+
+
 
 const NewSongForm = ({ addSong }) => {
     const [title, setTitle] = useState('');
